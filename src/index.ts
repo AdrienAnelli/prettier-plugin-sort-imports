@@ -46,6 +46,12 @@ const options = {
         default: false,
         description: 'Should specifiers be sorted?',
     },
+    enabled: {
+        type: 'boolean',
+        category: 'Global',
+        default: true,
+        description: 'Is the plugin enabled or not?',
+    },
 };
 
 module.exports = {
