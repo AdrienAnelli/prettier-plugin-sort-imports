@@ -15,10 +15,10 @@ export function preprocessor(code: string, options: PrettierOptions) {
         importOrderSeparation,
         importOrderGroupNamespaceSpecifiers,
         importOrderSortSpecifiers,
-        enabled,
+        sortImportEnabled,
     } = options;
 
-    if (!enabled) return null
+    if (!sortImportEnabled) return null;
 
     const importNodes: ImportDeclaration[] = [];
     const parserOptions: ParserOptions = {

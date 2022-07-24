@@ -46,7 +46,7 @@ const options = {
         default: false,
         description: 'Should specifiers be sorted?',
     },
-    enabled: {
+    sortImportEnabled: {
         type: 'boolean',
         category: 'Global',
         default: true,

@@ -9,7 +9,7 @@ export interface PrettierOptions extends RequiredOptions {
     importOrderSeparation: boolean;
     importOrderGroupNamespaceSpecifiers: boolean;
     importOrderSortSpecifiers: boolean;
-    enabled: boolean;
+    sortImportEnabled: boolean;
 }
 
 export type ImportGroups = Record<string, ImportDeclaration[]>;
