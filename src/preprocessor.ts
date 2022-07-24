@@ -8,6 +8,8 @@ import { getExperimentalParserPlugins } from './utils/get-experimental-parser-pl
 import { getSortedNodes } from './utils/get-sorted-nodes';
 
 export function preprocessor(code: string, options: PrettierOptions) {
+    if (!options.sortImportEnabled) return code;
+
     const {
         importOrderParserPlugins,
         importOrder,
@@ -15,10 +17,7 @@ export function preprocessor(code: string, options: PrettierOptions) {
         importOrderSeparation,
         importOrderGroupNamespaceSpecifiers,
         importOrderSortSpecifiers,
-        sortImportEnabled,
     } = options;
-
-    if (!sortImportEnabled) return null;
 
     const importNodes: ImportDeclaration[] = [];
     const parserOptions: ParserOptions = {
